@@ -7,13 +7,13 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: "0.0.0.0", // Permite acesso externo
-    port: 5173,
+    port: Number(process.env.VITE_PORT_EXPORT_REACT ?? '5173'),
     watch: {
       usePolling: true, // Necessário para hot reload no Docker
     },
     strictPort: true,
     hmr: {
-      clientPort: 5173, // Garante que o HMR use a porta correta
+      clientPort: Number(process.env.VITE_PORT_EXPORT_REACT ?? '5173') // Garante que o HMR use a porta correta
     },
   },
 });
