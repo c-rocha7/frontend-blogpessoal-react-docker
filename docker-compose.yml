@@ -10,10 +10,10 @@ services:
     environment:
       - VITE_API_URL=${VITE_API_URL:-http://localhost:3000}
     networks:
-      - app-network
+      - network-blogpessoal
 
 networks:
-  app-network:
+  network-blogpessoal:
     external: true
 
 volumes:
