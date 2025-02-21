@@ -26,11 +26,13 @@ function Navbar() {
             </Link>
             <Link to="/temas" className="hover:underline">
               Temas
-            </Link>{" "}
+            </Link>
             <Link to="/cadastrartema" className="hover:underline">
               Cadastrar tema
-            </Link>{" "}
-            Perfil{" "}
+            </Link>
+            <Link to="/perfil" className="hover:underline">
+              Perfil
+            </Link>
             <Link to="" onClick={logout} className="hover:underline">
               Sair
             </Link>
